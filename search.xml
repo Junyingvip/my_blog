@@ -29,4 +29,55 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Paper1</title>
+    <url>/my_blog/paper1/</url>
+    <content><![CDATA[<h2 id="Topic-diversity-A-discipline-scheme-free-diversity-measurement-for-journals"><a href="#Topic-diversity-A-discipline-scheme-free-diversity-measurement-for-journals" class="headerlink" title="Topic diversity: A discipline scheme-free diversity measurement for journals"></a>Topic diversity: A discipline scheme-free diversity measurement for journals</h2><p>[toc] </p>
+<h3 id="做什么事？（创新之处）"><a href="#做什么事？（创新之处）" class="headerlink" title="做什么事？（创新之处）"></a>做什么事？（创新之处）</h3><h4 id="一句话表达：识别-journal-的diversity"><a href="#一句话表达：识别-journal-的diversity" class="headerlink" title="一句话表达：识别 journal 的diversity"></a>一句话表达：识别 journal 的diversity</h4><h3 id="研究问题"><a href="#研究问题" class="headerlink" title="研究问题"></a>研究问题</h3><blockquote>
+<p>在这篇文章中, 作者提出了一种新的期刊多样性的测量方法,该方法特点是不以原有的期刊分类规则为评估依据，叫做：topic diversity (TD).</p>
+</blockquote>
+<ol>
+<li><p>背景：以往是用基于<font color="#FFA500">引文</font>(citation based)度量方法<br>缺陷：<font color="#FFA500">多样性</font>（diversity）的分类标准是凭借人的经验进行划分；多以引文所属学科种类来代评估多样性；</p>
+</li>
+<li><p>创新：提出识别journal diversity的新方法，该方法利用论文的AB为元数据，通过识别主题（topic diversity，TD）的多样性，来识别期刊的多样性。<br>具体：相较于以学科为分类依据，主题的细粒度更小；提出了确切的主题多样性的评估指标。</p>
+<h3 id="具体方案"><a href="#具体方案" class="headerlink" title="具体方案"></a>具体方案</h3><h4 id="达到的目标：输入期刊的所有ab，输出这本期刊的topic-diversity-数值。"><a href="#达到的目标：输入期刊的所有ab，输出这本期刊的topic-diversity-数值。" class="headerlink" title="达到的目标：输入期刊的所有ab，输出这本期刊的topic diversity 数值。"></a>达到的目标：输入期刊的所有ab，输出这本期刊的topic diversity 数值。</h4></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">step</th>
+<th align="left">name</th>
+<th align="left">content</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left">word extraction</td>
+<td align="left"><font color="#FFA500">1.文本预处理</font> （分词、去停用词，词性标注，抽取名词，词根还原，大小写转换）<font color="#FFA500">2.单词选择</font>（用 pagerank算法来计算word的重要程度并进行排名，取前三。）<font color="#FFA500">3.词汇抽取</font>（如果相邻的两个单词在原文摘要中出现且连成短语具有意义，就将它们合并成一个短语。）</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">network construction</td>
+<td align="left">无向加权共现网络用G来表示</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">topic detection</td>
+<td align="left">运用 Louvain method 来进行社区检测确定主题</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">diversity calculation</td>
+<td align="left">$DIV-TD_m&#x3D;\frac{n_m}{N}\times(1-Gini)\times \sum_{i,j,i\neq j}\frac{d_{ij}}{n_m(n_m-1)}$</td>
+</tr>
+</tbody></table>
+<h3 id="研究结果"><a href="#研究结果" class="headerlink" title="研究结果"></a>研究结果</h3>]]></content>
+      <categories>
+        <category>paper read</category>
+      </categories>
+      <tags>
+        <tag>topic diversity</tag>
+        <tag>journal</tag>
+      </tags>
+  </entry>
 </search>
